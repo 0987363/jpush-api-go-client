@@ -3,6 +3,7 @@ package jpushclient
 const (
 	TAG     = "tag"
 	TAG_AND = "tag_and"
+	TAG_NOT = "tag_not"
 	ALIAS   = "alias"
 	ID      = "registration_id"
 )
@@ -26,6 +27,10 @@ func (this *Audience) SetTag(tags []string) {
 
 func (this *Audience) SetTagAnd(tags []string) {
 	this.set(TAG_AND, tags)
+}
+
+func (this *Audience) SetTagNot(tags []string) {
+	this.set(TAG_NOT, tags)
 }
 
 func (this *Audience) SetAlias(alias []string) {
